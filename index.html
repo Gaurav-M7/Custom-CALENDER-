@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom PWA Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <h1>PlanIt</h1>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="app-content">
+    
+    <!-- HOME TAB -->
+    <section id="tab-home" class="tab-panel active">
+      <div class="card today-box">
+        <h2 id="home-today-date">Today's Date</h2>
+        <div id="home-today-tasks" class="task-list">
+          <!-- Today's tasks dynamically injected here -->
+        </div>
+      </div>
+      
+      <div class="upcoming-box">
+        <h3>Upcoming Days</h3>
+        <div id="home-upcoming-tasks">
+          <!-- Upcoming tasks dynamically injected here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- DATES (CALENDAR) TAB -->
+    <section id="tab-dates" class="tab-panel">
+      <div class="calendar-container card">
+        <div class="calendar-header">
+          <button id="prev-month">&lt;</button>
+          <h2 id="calendar-month-year"></h2>
+          <button id="next-month">&gt;</button>
+        </div>
+        <div class="calendar-weekdays">
+          <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+        </div>
+        <div id="calendar-days" class="calendar-days"></div>
+      </div>
+
+      <!-- Task Creator Form for Selected Date -->
+      <div class="card task-form-box">
+        <h3 id="selected-date-label">Select a date to add a task</h3>
+        <form id="add-task-form" class="hidden">
+          <input type="text" id="task-input" placeholder="What needs to be done?" required>
+          <button type="submit" class="btn">Add Task</button>
+        </form>
+        <div id="selected-date-tasks" class="task-list"></div>
+      </div>
+    </section>
+
+    <!-- TODO TAB -->
+    <section id="tab-todos" class="tab-panel">
+      <h2>All Master Todos</h2>
+      <div id="all-todos-list" class="task-list">
+        <!-- Complete task log -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="nav-bar">
+    <button class="nav-btn active" data-tab="home">
+      <span class="icon">🏠</span>
+      <span class="label">Home</span>
+    </button>
+    <button class="nav-btn" data-tab="dates">
+      <span class="icon">📅</span>
+      <span class="label">Dates</span>
+    </button>
+    <button class="nav-btn" data-tab="todos">
+      <span class="icon">📋</span>
+      <span class="label">Todo</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
