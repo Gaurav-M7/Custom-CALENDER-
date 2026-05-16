@@ -128,4 +128,3 @@ MIT License — free to use, modify, and distribute.
 
 ---
 
-*Made with ❤️ using vanilla web technologies*
