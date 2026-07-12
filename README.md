@@ -2,7 +2,7 @@
 
 A beautiful, iOS-inspired Progressive Web App for managing daily tasks and upcoming plans. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
 
-> **Live Demo:** `https://gaurav-m7.github.io/planit/`
+> **Live Demo:** `https://gaurav-m7.github.io/planit](https://gaurav-m7.github.io/Custom-CALENDER-/`
 
 ---
 
